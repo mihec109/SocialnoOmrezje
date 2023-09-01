@@ -1,0 +1,13 @@
+﻿<Application x:Class="MH_SocialnoOmrezje.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:l="clr-namespace:MH_SocialnoOmrezje"     
+             xmlns:local="clr-namespace:MH_SocialnoOmrezje"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ObjectDataProvider x:Key="odpsettings" ObjectType="{x:Type l:Properties.Settings}"></ObjectDataProvider>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

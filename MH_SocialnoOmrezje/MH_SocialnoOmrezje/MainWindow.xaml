@@ -1,0 +1,93 @@
+﻿<Window x:Class="MH_SocialnoOmrezje.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:MH_SocialnoOmrezje"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MH_SocialnoOmrezje" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.ColumnSpan="3">
+            <MenuItem Header="File">
+                <MenuItem Header="Objave">
+                    <MenuItem Header="Dodaj" Click="MenuItem_Click_2"></MenuItem>
+                    <MenuItem Header="Odstrani" Click="MenuItem_Click_1"></MenuItem>
+                    <MenuItem Header="Uredi" Click="MenuItem_Click_5"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Datoteka">
+                    <MenuItem Header="Prijatelji"  Click="MenuItem_Click_3"></MenuItem>
+                    <MenuItem Header="Izhod" Click="MenuItem_Click"></MenuItem>
+                    <MenuItem Header="Uvoz" Click="MenuItem_Click_4"></MenuItem>
+                    <MenuItem Header="Izvoz" Click="MenuItem_Click_6"></MenuItem>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+
+
+        <TabControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <TabItem Header="Zid">
+                <StackPanel>
+                    <ListView Name="list" MouseDoubleClick="dc">
+                    </ListView>
+                    <Button Width="30" Margin="10" HorizontalAlignment="Left" Click="Button_Click" RenderTransformOrigin="0.698,0.597">
+                        <Image Source="res/dodaj.png"></Image>
+                    </Button>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="O meni" Height="22" VerticalAlignment="Bottom" >
+                <!--<StackPanel Margin="10">
+                    <TextBox Margin="10" Name="ime" Text="{Binding Source={StaticResource odpsettings}, Path=Default.Ime}"></TextBox>
+                    <TextBox Margin="10" Text="{Binding Source={StaticResource odpsettings}, Path=Default.Priimek}" Name="priimek"></TextBox>
+                    <TextBox Margin="10" Text="{Binding Source={StaticResource odpsettings}, Path=Default.Datum_rojstva}" Name="datum_roj"></TextBox>
+                    <Button Width="30" Margin="10" HorizontalAlignment="Left" Name="ena"  Click="Button_Click2">
+                        <Image Source="res/uredi.png"></Image>
+                    </Button>
+                    <Button Width="30" Margin="10" HorizontalAlignment="Left" Name="dva" Click="Button_Click3">
+                        <Image Source="res/shrani.png"></Image>
+                    </Button>
+                </StackPanel>-->
+                <uc:Userr/>
+            </TabItem>
+            <TabItem Header="Prijatelji">
+                <StackPanel>
+                    <TextBox Name="txt" Text="Isci prijatelja: " TextChanged="TextBox_TextChanged"></TextBox>
+                    <!--<Button Width="30" Margin="10" HorizontalAlignment="Left" Click="Button_Click3">
+                        <Image Source="res/isci.png"></Image>
+                    </Button>-->
+                    <ListBox Height="70" Width="70" HorizontalAlignment="Left">Miha Hirtl</ListBox>
+                    <ListBox Height="70" Width="70" HorizontalAlignment="Left">Bill Gates</ListBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Slike">
+                <StackPanel>
+                    <Image Margin="5" Source="res/1.jpg" Width="100" Height="Auto" HorizontalAlignment="Left" ></Image>
+                    <Image Margin="5" Source="res/2.jpeg" Width="100" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"></Image>
+                    <Image Margin="5" Source="res/3.jpg" Width="100" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"></Image>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <Image Grid.Row="2" Grid.Column="3" Source="res/mz.jpg"></Image>
+        
+    </Grid>
+    
+</Window>

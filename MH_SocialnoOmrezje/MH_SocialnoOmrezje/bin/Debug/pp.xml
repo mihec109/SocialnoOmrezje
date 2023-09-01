@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfObjave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Objave>
+    <Vsebina>ToJeObjava brez prijatelja</Vsebina>
+    <Slika>slika1</Slika>
+    <Naslov> brez prijatelja</Naslov>
+    <Omogoci_komentiranje>false</Omogoci_komentiranje>
+    <Omogoci_lajkanje>false</Omogoci_lajkanje>
+    <vseb>ToJeObjava brez prijatelja</vseb>
+    <slik>slika1</slik>
+    <nas> brez prijatelja</nas>
+    <omk>false</omk>
+    <oml>false</oml>
+  </Objave>
+</ArrayOfObjave>
